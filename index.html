@@ -1,0 +1,72 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Outfit Planner — find the look, then find it on the rack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="masthead">
+    <!-- <div class="eyebrow">ATELIER&nbsp;NO.&nbsp;01</div> -->
+    <h1>Outfit Planner</h1>
+    <p class="tagline">Your mood your fit!!</p>
+    <img src="https://i.pinimg.com/236x/08/28/69/082869e373fb2a488cb123eb83395950.jpg">
+    <!--  -->
+  </header>
+
+  <!-- STEP 1: age + event -->
+  <section id="step1" class="panel active">
+    <form id="detailsForm" class="formCard">
+      <div class="field">
+        <label for="ageInput">Your age</label>
+        <input type="number" id="ageInput" min="1" max="100" placeholder="e.g. 24" required />
+      </div>
+      <div class="field">
+        <label for="eventInput">Occasion</label>
+        <select id="eventInput" required>
+          <option value="">Choose an occasion</option>
+          <option value="wedding">Wedding</option>
+          <option value="festival">Festival</option>
+          <option value="office">Office / formal day</option>
+          <option value="interview">Interview</option>
+          <option value="casual">Casual outing</option>
+          <option value="party">Party</option>
+          <option value="date">Date night</option>
+        </select>
+        <small>Backend currently covers these seven occasions</small>
+      </div>
+      <button type="submit" class="primaryBtn">Find my outfits</button>
+    </form>
+  </section>
+
+  <!-- STEP 2: results -->
+  <section id="step2" class="panel">
+    <div class="resultsHead">
+      <div>
+        <h2 id="resultsTitle">Looks for you</h2>
+        <p id="resultsSub"></p>
+      </div>
+      <button id="backTo1" class="ghostBtn">&larr; Edit details</button>
+    </div>
+    <div id="notice" class="notice" hidden></div>
+    <div id="resultsGrid" class="grid"></div>
+  </section>
+
+  <footer>
+    More things to add in this.Just learning and experimenting.
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
